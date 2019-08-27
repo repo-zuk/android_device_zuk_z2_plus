@@ -20,12 +20,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from z2_plus device
 $(call inherit-product, device/zuk/z2_plus/device.mk)
 
-# Inherit some common EVO stuff.
+# Inherit some common PE stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Pixel Experience build type
+CUSTOM_BUILD_TYPE := OFFICIAL
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BOOT_ANIMATION_RES_EVO := true
 
 # Gapps Config
 TARGET_GAPPS_ARCH := arm64
